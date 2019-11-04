@@ -8,6 +8,8 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 import org.hibernate.annotations.GenericGenerator;
 
@@ -22,7 +24,9 @@ public class Reserva {
 	@GeneratedValue(generator = "system-uuid")
 	@GenericGenerator(name = "system-uuid", strategy = "uuid2")
 	private String idReserva;
+	@Temporal(TemporalType.DATE)
 	private Date fechaIngresoReserva;
+	@Temporal(TemporalType.DATE)
 	private Date fechaSalidaReserva;
 	private int cantidadPersonasReserva;
 	private String descripcionReserva;
