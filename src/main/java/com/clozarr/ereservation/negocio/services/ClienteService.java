@@ -3,6 +3,8 @@
  */
 package com.clozarr.ereservation.negocio.services;
 
+import java.util.List;
+
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -52,5 +54,10 @@ public class ClienteService {
 	public Cliente findByIdentification(String identificacionCliente) {
 		
 		return this.clienteRepository.findByIdentification(identificacionCliente);
+	}
+
+	public List<Cliente> findAll() {
+		
+		return this.clienteRepository.findAll();
 	}
 }
