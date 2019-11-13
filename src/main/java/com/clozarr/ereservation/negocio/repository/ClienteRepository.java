@@ -18,7 +18,7 @@ public interface ClienteRepository extends JpaRepository<Cliente, String> {
 	public List<Cliente> findByApellidoCliente(String apellidoCliente);
 	
    /**
-	 * Consulta Usando JPQL, Anotando la Clase en el paquete del Modelo con NamedQuery
+	 * Consulta Usando JPQL, Anotando la Clase 'Cliente' en el paquete del Modelo con NamedQuery
 	 */
 	public Cliente findByIdentification(String identificacionCliente);
 }
